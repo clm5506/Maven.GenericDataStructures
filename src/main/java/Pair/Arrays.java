@@ -13,23 +13,23 @@ import java.util.Collections;
 public class Arrays {
 
     
-    public static <E extends Comparable> Pair<E> firstLast(ArrayList<E> a) {
+    public static <E extends Comparable<E>> Pair<E> firstLast(ArrayList<E> a) {
         return new Pair<>(a.get(0),a.get(a.size()-1));
 
     }
 
-    public static <E extends Comparable> E min(ArrayList<E> al) {
+    public static <E extends Comparable<E>> E min(ArrayList<E> al) {
 
-        return(E) Collections.min(al);
+        return Collections.min(al);
     }
 
-    public static<E extends Comparable> E max(ArrayList<E> al) {
+    public static<E extends Comparable<E>> E max(ArrayList<E> al) {
 
-        return (E) Collections.max(al);
+        return Collections.max(al);
     }
 
 
-    public static <E extends Comparable> Pair<E> minMax(ArrayList<E> al) {
+    public static <E extends Comparable<E>> Pair<E> minMax(ArrayList<E> al) {
 
         return new Pair<>(min(al),max(al));
     }
